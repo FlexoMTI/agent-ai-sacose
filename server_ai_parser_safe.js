@@ -102,8 +102,7 @@ Dacă nu găsești un câmp, setează-l cu null.
 
     res.json({ reply: reply.trim() });
   } catch (err) {
-    console.error("Eroare generală:
-", err);
+    console.error("Eroare generală:", err);
     res.status(500).json({ error: "Eroare server sau GPT" });
   }
 });
