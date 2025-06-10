@@ -27,7 +27,7 @@ Extrage din următorul mesaj datele despre ofertă pentru sacoșe:
 
 Mesaj: "${message}"
 
-Returnează un obiect JSON cu câmpurile:
+Returnează un obiect TXT cu câmpurile:
 {
   "dimensiune": "...",
   "material": "...",
