@@ -2,7 +2,7 @@
   "name": "ai-sacose-agent",
   "version": "1.0.0",
   "type": "module",
-  "main": "server.js",
+  "main": "server_ai_praser_safe.js",
   "scripts": {
     "start": "node server_ai_praser_safe.js"
   },
