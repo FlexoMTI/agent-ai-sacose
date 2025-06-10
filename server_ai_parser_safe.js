@@ -12,7 +12,7 @@ import {
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const OPENAI_API_KEY =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;
+const OPENAI_API_KEY = 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;
 
 app.use(cors());
 app.use(express.json());
