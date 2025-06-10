@@ -59,8 +59,7 @@ Dacă nu găsești un câmp, setează-l cu null.
     try {
       extracted = JSON.parse(jsonText);
     } catch (err) {
-      console.error("❌ GPT a returnat un JSON invalid:
-", jsonText);
+      console.error("❌ GPT a returnat un JSON invalid:", jsonText);
       return res.json({
         reply: "Nu am putut înțelege complet cererea. Poți reformula, menționând clar dimensiunea, tirajul și materialul?"
       });
