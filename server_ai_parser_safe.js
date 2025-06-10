@@ -72,7 +72,6 @@ Textul este: """${message}"""
     }
   ],
   temperature: 0.2
-      })
     });
 
     const extractData = await extractRes.json();
