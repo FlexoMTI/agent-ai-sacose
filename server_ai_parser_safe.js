@@ -27,7 +27,7 @@ Extrage din următorul mesaj datele despre ofertă pentru sacoșe:
 
 Mesaj: "${message}"
 
-Returnează un obiect TXT cu câmpurile:
+Returnează un obiect JSON cu câmpurile:
 {
   "dimensiune": "...",
   "material": "...",
@@ -57,8 +57,8 @@ Dacă nu găsești un câmp, setează-l cu null.
 
     let extracted;
     try {
-      extracted = JSON.parse(jsonText);
-    } catch (err) {
+      extracted = JSON.parse(jsonText);}
+    catch (err) {
       console.error("❌ GPT a returnat un JSON invalid:", jsonText);
       return res.json({
         reply: "Nu am putut înțelege complet cererea. Poți reformula, menționând clar dimensiunea, tirajul și materialul?"
