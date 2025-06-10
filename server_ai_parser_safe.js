@@ -46,9 +46,32 @@ Dacă nu găsești un câmp, setează-l cu null.
         "Authorization": `Bearer ${OPENAI_API_KEY}`
       },
       body: JSON.stringify({
-        model: "gpt-3.5-turbo",
-        messages: [{ role: "user", content: extractPrompt }],
-        temperature: 0.2
+  model: "gpt-3.5-turbo",
+  response_format: "json",  // 👈 Asta activează JSON mode
+  messages: [
+    {
+      role: "system",
+      content: "Răspunzi DOAR cu un obiect JSON. Fără text explicativ."
+    },
+    {
+      role: "user",
+      content: `
+Extrage câmpurile despre ofertă din textul de mai jos. Returnează obiect JSON cu:
+{
+  "dimensiune": "...",
+  "material": "...",
+  "tiraj": număr,
+  "maner": "...",
+  "imprimare": "...",
+  "culori": număr
+}
+Dacă un câmp nu apare, setează-l cu null.
+
+Textul este: """${message}"""
+`
+    }
+  ],
+  temperature: 0.2
       })
     });
 
