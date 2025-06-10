@@ -17,7 +17,7 @@ export async function initDB() {
       content TEXT,
       timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
     );
-  \`);
+  `);
 }
 
 export async function saveMessage(clientId, role, content) {
