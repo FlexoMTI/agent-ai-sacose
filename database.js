@@ -9,7 +9,7 @@ export async function initDB() {
     driver: sqlite3.Database
   });
 
-  await db.exec(\`
+  await db.exec(`
     CREATE TABLE IF NOT EXISTS messages (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       clientId TEXT,
